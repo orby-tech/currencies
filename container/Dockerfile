@@ -10,4 +10,4 @@ RUN cd currencies/backend && npm install && npm run build
 
 RUN cd currencies/backend
 
-CMD cd currencies/backend && node dist/backend/src/main.js 
+CMD cd currencies/backend && node dist/main.js 

@@ -10,8 +10,6 @@ services:
     environment:
       - DB_HOST=db_deploy
       - JWT_SECRET=somesecret
-    depends_on:
-      - db_deploy
 
 networks:
   postgres:
