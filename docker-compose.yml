@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  container_deploy:
+    build: ./container
+    ports:
+      - 3400:3400
+    networks:
+      - postgres
+    environment:
+      - DB_HOST=db_deploy
+      - JWT_SECRET=somesecret
+    depends_on:
+      - db_deploy
+
+networks:
+  postgres:
+    driver: bridge
